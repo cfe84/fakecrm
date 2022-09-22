@@ -2,7 +2,7 @@ const express = require("express");
 const Store = require("./store");
 const app = express();
 app.use(express.json());
-const port = 3000;
+const port = Number.parseInt(process.env.PORT || "3000");
 
 const store = Store("store.json");
 
